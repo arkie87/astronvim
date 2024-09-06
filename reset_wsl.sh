@@ -4,7 +4,6 @@ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew
 test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
-
 # sudo apt-get install build-essential
 
 sudo apt-get update
@@ -17,6 +16,11 @@ brew install npm
 brew install neovim
 npm install -g neovim
 
-git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
-rm -rf ~/.config/nvim/.git
+# git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+# rm -rf ~/.config/nvim/.git
+
+cd ~/.config
+git clone https://github.com/arkie87/astronvim.git
+mv ~/.config/astronvim ~/.config/nvim
+
 nvim
