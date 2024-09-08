@@ -18,12 +18,9 @@ brew install ripgrep
 npm install -g neovim
 
 
-# Install blank AstroNvim Template
 # git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 # rm -rf ~/.config/nvim/.git
 
-
-# Instal Custom Template
 cd ~/.config
 git clone https://github.com/arkie87/astronvim.git
 mv ~/.config/astronvim ~/.config/nvim
