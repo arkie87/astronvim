@@ -40,11 +40,11 @@ keymap.set("n", "<leader>v", "ggVG", { desc = "Select all" })
 keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 %<CR>", { desc = "Run current file" })
 
 --Appends
-keymap.set("n", "<leader>,", "A,<esc>J", { desc = "Append comma and join" })
-keymap.set("n", "<leader>;", "A;<esc>J", { desc = "Append semicolon and join" })
-keymap.set("n", "<leader>'", "I'<esc>A',<esc>j", { desc = "Surround single quote and join" })
-keymap.set("n", '<leader>"', 'I"<esc>A",<esc>j', { desc = "Surround double quote and join" })
+keymap.set("n", "<leader><leader>,", "A,<esc>J", { desc = "Append comma and join" })
+keymap.set("n", "<leader><leader>;", "A;<esc>J", { desc = "Append semicolon and join" })
+keymap.set("n", "<leader><leader>'", "I'<esc>A',<esc>j", { desc = "Surround single quote and join" })
+keymap.set("n", '<leader><leader>"', 'I"<esc>A",<esc>j', { desc = "Surround double quote and join" })
 
-keymap.set("n", "<leader>(", "I(<esc>A)<esc>j", { desc = "Surround in parantheses" })
-keymap.set("n", "<leader>[", "I[<esc>A]<esc>j", { desc = "Surround in brackets" })
-keymap.set("n", "<leader>{", "I{<esc>A}<esc>j", { desc = "Surround in braces" })
+keymap.set("n", "<leader><leader>(", "I(<esc>A)<esc>j", { desc = "Surround in parantheses" })
+keymap.set("n", "<leader><leader>[", "I[<esc>A]<esc>j", { desc = "Surround in brackets" })
+keymap.set("n", "<leader><leader>{", "I{<esc>A}<esc>j", { desc = "Surround in braces" })
