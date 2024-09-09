@@ -33,13 +33,12 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         scrolloff = 10,
-        numberwidth = 6,
+        numberwidth = 7,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
-        numberwidth = 6,
       },
     },
     -- Mappings can be configured through AstroCore as well.

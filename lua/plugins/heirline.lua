@@ -24,7 +24,7 @@ return {
 
     opts.statuscolumn = {
       init = function(self) self.bufnr = vim.api.nvim_get_current_buf() end,
-      status.component.foldcolumn { padding = { left = 1, right = 1 } },
+      status.component.foldcolumn { padding = { left = 1 } },
       status.component.numbercolumn { numbercolumn = { culright = false } },
       status.component.signcolumn(),
     }
