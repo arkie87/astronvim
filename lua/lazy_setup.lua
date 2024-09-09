@@ -32,4 +32,3 @@ require("lazy").setup({
 } --[[@as LazyConfig]])
 
 require "keymaps"
-require "options"

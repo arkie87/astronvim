@@ -34,7 +34,7 @@ keymap.set("v", "<leader>=", "g<C-a>", { desc = "Increment" })
 keymap.set("v", "<leader>-", "g<C-x>", { desc = "Decrement" })
 
 --Highlight all
-keymap.set("n", "<leader>v", "ggVG", { desc = "Select all" })
+keymap.set("n", "VA", "ggVG", { desc = "Select all" })
 
 --Actions
 keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 %<CR>", { desc = "Run current file" })
