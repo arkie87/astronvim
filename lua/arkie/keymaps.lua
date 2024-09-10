@@ -37,7 +37,10 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 --Highlight all
-keymap.set("n", "VA", "ggVG", { desc = "Select all" })
+keymap.set({ "n", "v", "i" }, "<C-a>", "<esc>ggVG", { desc = "Select all" })
+
+--Save
+keymap.set({ "n", "v", "i" }, "<C-s>", "<cmd>w<CR>", { desc = "Save" })
 
 --Next/Prev
 keymap.set("n", "[(", "?(<CR>", { desc = "Previous (" })
@@ -70,10 +73,10 @@ vim.keymap.set("n", "<leader>un", function()
 end, { desc = "Toggle relative numbers" })
 
 -- Increment/Decrement
-keymap.set("n", "<leader>=", "<C-a>", { desc = "Increment" })
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement" })
-keymap.set("v", "<leader>=", "g<C-a>", { desc = "Increment" })
-keymap.set("v", "<leader>-", "g<C-x>", { desc = "Decrement" })
+keymap.set("n", "<leader>=", "<C-a>", { noremap = true, desc = "Increment" })
+keymap.set("n", "<leader>-", "<C-x>", { noremap = true, desc = "Decrement" })
+keymap.set("v", "<leader>=", "g<C-a>", { noremap = true, desc = "Increment" })
+keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 
 --Actions
 keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 %<CR>", { desc = "Run current file" })
