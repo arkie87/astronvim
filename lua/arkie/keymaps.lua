@@ -32,9 +32,9 @@ keymap.set("n", "Q", "@q")
 --Keep cursor in place when applying J
 vim.keymap.set("n", "J", "mzJ`z", { noremap = true })
 
---Move Up
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+--Move block of text up/down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
 
 --Highlight all
 keymap.set({ "n", "v", "i" }, "<C-a>", "<esc>ggVG", { desc = "Select all" })
