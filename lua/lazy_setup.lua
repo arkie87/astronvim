@@ -30,5 +30,3 @@ require("lazy").setup({
     },
   },
 } --[[@as LazyConfig]])
-
-require "arkie"
