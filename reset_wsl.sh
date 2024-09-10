@@ -15,7 +15,9 @@ sudo apt-get install python3-neovim
 brew install npm
 brew install neovim
 brew install ripgrep
+brew install lazygit
 npm install -g neovim
+
 
 
 # Install blank AstroNvim Template
