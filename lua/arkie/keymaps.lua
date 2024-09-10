@@ -39,6 +39,21 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 --Highlight all
 keymap.set("n", "VA", "ggVG", { desc = "Select all" })
 
+--Next/Prev
+keymap.set("n", "[(", "?(<CR>", { desc = "Previous (" })
+keymap.set("n", "[[", "?[<CR>", { desc = "Previous [" })
+keymap.set("n", "[{", "?{<CR>", { desc = "Previous {" })
+keymap.set("n", "[)", "?)<CR>", { desc = "Previous )" })
+keymap.set("n", "[]", "?]<CR>", { desc = "Previous ]" })
+keymap.set("n", "[}", "?}<CR>", { desc = "Previous }" })
+
+keymap.set("n", "](", "/(<CR>", { desc = "Next (" })
+keymap.set("n", "][", "/[<CR>", { desc = "Next [" })
+keymap.set("n", "]{", "/{<CR>", { desc = "Next {" })
+keymap.set("n", "])", "/)<CR>", { desc = "Next )" })
+keymap.set("n", "]]", "/]<CR>", { desc = "Next ]" })
+keymap.set("n", "]}", "/}<CR>", { desc = "Next }" })
+
 --
 -- LEADER COMMANDS --
 --
