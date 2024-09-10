@@ -7,7 +7,7 @@ return {
       opts = function(_, opts)
         local maps = opts.mappings
         local resession = require "resession"
-        maps.n["<Leader>s"] = { function() end, desc = "Sessions" }
+        maps.n["<Leader>s"] = { desc = "Sessions" }
         maps.n["<Leader>s."] = { function() resession.load "Last Session" end, desc = "Load last session" }
         maps.n["<Leader>ss"] = { function() resession.save() end, desc = "Save this session" }
         maps.n["<Leader>sS"] = {
