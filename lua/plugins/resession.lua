@@ -7,16 +7,28 @@ return {
       opts = function(_, opts)
         local maps = opts.mappings
         local resession = require "resession"
+
+        -- Remove Old Mappings
+        maps.n["<Leader>Sl"] = nil
+        maps.n["<Leader>Sd"] = nil
+        maps.n["<Leader>SD"] = nil
+        maps.n["<Leader>Sf"] = nil
+        maps.n["<Leader>SF"] = nil
+        maps.n["<Leader>Ss"] = nil
+        maps.n["<Leader>SS"] = nil
+        maps.n["<Leader>St"] = nil
+        maps.n["<Leader>S."] = nil
+
+        -- Define new mappings
         maps.n["<Leader>s"] = { desc = "Sessions" }
         maps.n["<Leader>s."] = { function() resession.load "Last Session" end, desc = "Load last session" }
         maps.n["<Leader>ss"] = { function() resession.save() end, desc = "Save this session" }
         maps.n["<Leader>sS"] = {
           function()
-            print "detach"
             resession.detach()
             resession.save()
           end,
-          desc = "Saveas this session",
+          desc = "Save as new session",
         }
         maps.n["<Leader>sd"] = { function() require("resession").delete() end, desc = "Delete a session" }
         maps.n["<Leader>sl"] = { function() require("resession").load() end, desc = "Load a session" }
