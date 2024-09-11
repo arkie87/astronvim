@@ -8,3 +8,6 @@ opt.scrolloff = 10
 SINGLENUMBERWIDTH = 4
 DUALNUMBERWIDTH = 7
 opt.numberwidth = DUALNUMBERWIDTH
+
+--Highlight matching parentheses
+vim.cmd "hi MatchParen guifg=red gui=underline"
