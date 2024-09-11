@@ -33,8 +33,8 @@ keymap.set("n", "Q", "@q")
 vim.keymap.set("n", "J", "mzJ`z", { noremap = true })
 
 --Move block of text up/down
-keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
-keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
+keymap.set("v", "K", ":m '<-2<CR><CR>gv=gv", { noremap = true })
+keymap.set("v", "J", ":m '>+1<CR><CR>gv=gv", { noremap = true })
 
 --Highlight all
 keymap.set({ "n", "v", "i" }, "<C-a>", "<esc>ggVG", { desc = "Select all" })
