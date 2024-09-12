@@ -36,6 +36,10 @@ vim.keymap.set("n", "J", "mzJ`z", { noremap = true })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
 
+--Hold selection while indenting
+keymap.set("v", "<", "<gv", { noremap = true })
+keymap.set("v", ">", ">gv", { noremap = true })
+
 --Highlight all
 keymap.set({ "n", "v", "i" }, "<C-a>", "<esc>ggVG", { desc = "Select all" })
 
