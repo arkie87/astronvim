@@ -2,7 +2,7 @@
 local opt = vim.opt
 
 --cmdheight
--- opt.cmdheight = 1
+opt.cmdheight = 1
 
 --Scrolloff set
 opt.scrolloff = 10
