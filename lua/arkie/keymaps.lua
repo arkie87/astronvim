@@ -30,7 +30,7 @@ keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 keymap.set("n", "Q", "@q")
 
 --Keep cursor in place when applying J
-vim.keymap.set("n", "J", "mzJ`z", { noremap = true })
+keymap.set("n", "J", "mzJ`z", { noremap = true })
 
 --Move block of text up/down
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
@@ -83,7 +83,7 @@ keymap.set("v", "<leader>=", "g<C-a>", { noremap = true, desc = "Increment" })
 keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 
 --Actions
-keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 %<CR>", { desc = "Run current file" })
+keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 ~/.config/nvim/run.py %<CR>", { desc = "Run current file" })
 
 --Appends
 keymap.set("n", "<Leader><leader>", "", { desc = "►Edit Macros" })
