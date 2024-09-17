@@ -5,7 +5,7 @@ local ORANGE = "#F67126"
 local BLUE = "#2ACCF5"
 local GREEN = "#A6E22E"
 local RED = "#FF0000"
-local PURPLE = "#FFCCFF"
+local PURPLE = "#ccaaFF"
 local BLACK = "#000000"
 
 local cmd = vim.cmd
@@ -13,14 +13,14 @@ local cmd = vim.cmd
 local highlight = function(group, command) cmd("hi! " .. group .. " " .. command) end
 
 --GUI
-highlight("MatchParen", "guifg=" .. RED .. " gui=underline")
+highlight("MatchParen", "gui=underline")
 highlight("CursorLineNr", "guifg=" .. YELLOW)
 highlight("LineNr", "guifg=" .. GREY)
 
 --Punctuations
-highlight("Operator", "guifg=" .. ORANGE) --operators e.g. +=-
-highlight("@punctuation.bracket", "guifg=" .. ORANGE) --e.g. [{()}]
-highlight("@punctuation.delimiter", "guifg=" .. ORANGE) --e.g. :,.
+highlight("Operator", "guifg=" .. PURPLE) --operators e.g. +=-
+highlight("@punctuation.bracket", "guifg=" .. PURPLE) --e.g. [{()}]
+highlight("@punctuation.delimiter", "guifg=" .. PURPLE) --e.g. :,.
 
 --Comments
 highlight("Comment", "guifg=" .. ORANGE)
@@ -30,13 +30,13 @@ highlight("Identifier", "guifg=" .. GREY) --variables
 highlight("@property", "guifg=" .. GREY) --properties
 
 --Built-Ins
-local LITERAL = " guifg=#FFFF00"
-highlight("@type.builtin", LITERAL .. " gui=bold,italic")
-highlight("@function.builtin", LITERAL)
-highlight("@constructor", LITERAL)
-highlight("@attribute", LITERAL) --decorator
+local BUILTIN = "guifg=" .. ORANGE
+highlight("@type.builtin", BUILTIN .. " gui=bold,italic")
+highlight("@function.builtin", BUILTIN)
+highlight("@attribute", BUILTIN) --decorator
 
 --Literals
+local LITERAL = "guifg=" .. YELLOW
 highlight("Constant", LITERAL)
 highlight("Character", LITERAL)
 highlight("String", LITERAL)
@@ -59,6 +59,7 @@ highlight("Define", KEYWORD)
 local FUNCTION = " guifg=" .. GREEN .. " gui=bold"
 highlight("Type", FUNCTION)
 highlight("Function", FUNCTION)
+highlight("@constructor", FUNCTION)
 
 --Diagnostics
 highlight("DiagnosticVirtualTextError", "guifg=" .. RED .. " guibg=" .. BLACK)
