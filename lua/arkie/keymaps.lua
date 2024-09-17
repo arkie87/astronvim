@@ -85,6 +85,9 @@ keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 --Actions
 keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 ~/.config/nvim/run.py %<CR>", { desc = "Run current file" })
 
+--Inspect
+keymap.set({ "n", "v" }, "<leader>I", "<cmd>Inspect<CR>")
+
 --Appends
 keymap.set("n", "<Leader><leader>", "", { desc = "►Edit Macros" })
 keymap.set("n", "<leader><leader>,", "A,<esc>J", { desc = "Append comma and join" })
