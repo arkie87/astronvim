@@ -20,25 +20,26 @@ highlight("WinSeparator", "guifg=" .. GREY)
 highlight("ColorColumn", "guibg=" .. DARKGREY)
 
 --Punctuations
-highlight("Operator", "guifg=" .. PURPLE) --operators e.g. +=-
-highlight("@punctuation.bracket", "guifg=" .. PURPLE) --e.g. [{()}]
-highlight("@punctuation.delimiter", "guifg=" .. PURPLE) --e.g. :,.
+local PUNCTUATION = "guifg=" .. ORANGE
+highlight("Operator", PUNCTUATION) --operators e.g. +=-
+highlight("@punctuation.bracket", PUNCTUATION) --e.g. [{()}]
+highlight("@punctuation.delimiter", PUNCTUATION) --e.g. :,.
 
 --Comments
-highlight("Comment", "guifg=" .. ORANGE)
+highlight("Comment", "guifg=" .. YELLOW)
 
 --Variables
 highlight("Identifier", "guifg=" .. GREY) --variables
 highlight("@property", "guifg=" .. GREY) --properties
 
 --Built-Ins
-local BUILTIN = "guifg=" .. ORANGE
+local BUILTIN = "guifg=" .. YELLOW
 highlight("@type.builtin", BUILTIN .. " gui=bold,italic")
 highlight("@function.builtin", BUILTIN)
 highlight("@attribute", BUILTIN) --decorator
 
 --Literals
-local LITERAL = "guifg=" .. YELLOW
+local LITERAL = "guifg=" .. PURPLE
 highlight("Constant", LITERAL)
 highlight("Character", LITERAL)
 highlight("String", LITERAL)
