@@ -1,5 +1,6 @@
 --Colors
 local GREY = "#CCCCCC"
+local DARKGREY = "#555555"
 local YELLOW = "#FFFF00"
 local ORANGE = "#F67126"
 local BLUE = "#2ACCF5"
@@ -8,14 +9,15 @@ local RED = "#FF0000"
 local PURPLE = "#ccaaFF"
 local BLACK = "#000000"
 
-local cmd = vim.cmd
-
-local highlight = function(group, command) cmd("hi! " .. group .. " " .. command) end
+local highlight = function(group, command) vim.cmd("hi! " .. group .. " " .. command) end
 
 --GUI
-highlight("MatchParen", "gui=underline")
+highlight("MatchParen", "guifg=none gui=underline")
+highlight("CursorLine", "guibg=" .. DARKGREY)
 highlight("CursorLineNr", "guifg=" .. YELLOW)
 highlight("LineNr", "guifg=" .. GREY)
+highlight("WinSeparator", "guifg=" .. GREY)
+highlight("ColorColumn", "guibg=" .. DARKGREY)
 
 --Punctuations
 highlight("Operator", "guifg=" .. PURPLE) --operators e.g. +=-
