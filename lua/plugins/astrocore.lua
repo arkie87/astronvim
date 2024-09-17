@@ -70,7 +70,6 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
         ["<Leader>w"] = false,
-        ["<Leader>q"] = false,
         ["<Leader>Q"] = false,
       },
     },
