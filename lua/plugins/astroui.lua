@@ -19,7 +19,6 @@ return {
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
-        CursorLineNr = { fg = "#FFFF00" },
       },
     },
     -- Icons can be configured throughout the interface

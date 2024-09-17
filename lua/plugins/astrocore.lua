@@ -21,7 +21,10 @@ return {
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = true,
+      virtual_text = {
+        virt_text_pos = "right_align",
+        suffix = " ",
+      },
       underline = true,
     },
     -- vim options can be configured here
