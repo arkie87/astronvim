@@ -41,3 +41,6 @@ opt.encoding = "utf-8"
 SINGLENUMBERWIDTH = 4
 DUALNUMBERWIDTH = 7
 opt.numberwidth = DUALNUMBERWIDTH
+
+--Illumination
+vim.g.Illuminate_delay = 0
