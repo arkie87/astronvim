@@ -18,12 +18,16 @@ local highlight = function(group, commands)
 end
 
 --GUI
-highlight("MatchParen", { "guifg=none", "gui=underline" })
+highlight("MatchParen", { "guifg=", BLUE, "gui=underline" })
 highlight("CursorLine", { "guibg=", DARKGREY })
 highlight("CursorLineNr", { "guifg=", YELLOW })
 highlight("LineNr", { "guifg=", GREY })
 highlight("WinSeparator", { "guifg=", GREY })
-highlight("ColorColumn", { "guibg=", DARKGREY })
+highlight("ColorColumn", { "guibg=", "none" })
+highlight("Visual", { "guibg=", DARKGREY })
+highlight("HighlightedYank", { "guifg=", BLACK, "guibg=", YELLOW })
+highlight("IlluminatedWordRead", { "guifg=", BLACK, "guibg=", YELLOW, "gui=underline" })
+highlight("IlluminatedWordWrite", { "guifg=", BLACK, "guibg=", ORANGE, "gui=underline" })
 
 --Punctuations
 local PUNCTUATION = { "guifg=", ORANGE }
@@ -31,13 +35,14 @@ highlight("Operator", PUNCTUATION) --operators e.g. +=-
 highlight("@punctuation.bracket", PUNCTUATION) --e.g. [{()}]
 highlight("@punctuation.delimiter", PUNCTUATION) --e.g. :,.
 highlight("@punctuation.special", PUNCTUATION) --e.g. f-string {}
+highlight("@constructor.lua", PUNCTUATION) --e.g. {} in lua
 
 --Comments
 highlight("Comment", { "guifg=", YELLOW })
 
 --Variables
 highlight("Identifier", { "guifg=", GREY }) --variables
-highlight("@property", { "guifg=", GREY }) --properties
+highlight("@property", { "guifg=", YELLOW }) --properties
 
 --Built-Ins
 local BUILTIN = { "guifg=", YELLOW }
@@ -46,7 +51,7 @@ highlight("@function.builtin", BUILTIN)
 highlight("@attribute", BUILTIN) --decorator
 
 --Literals
-local LITERAL = { "guifg=", PURPLE }
+local LITERAL = { "guifg=", GREEN }
 highlight("Constant", LITERAL)
 highlight("Character", LITERAL)
 highlight("String", LITERAL)
@@ -55,18 +60,19 @@ highlight("Float", LITERAL)
 highlight("Boolean", LITERAL)
 
 --Keywords
-local KEYWORD = { " guifg=", BLUE }
+local KEYWORD = { " guifg=", PURPLE }
 highlight("Keyword", KEYWORD)
 highlight("@keyword.function", KEYWORD)
 highlight("Include", KEYWORD) --Import
 highlight("Typedef", KEYWORD) --Class
-highlight("@variable.builtin", KEYWORD) --Self
-highlight("@variable.parameter", { "guifg=", YELLOW }) --args, kwargs
+highlight("@variable.builtin", { "guifg=", BLUE }) --Self
+highlight("@variable.parameter", { "guifg=", GREY }) --args, kwargs
 highlight("Conditional", KEYWORD)
 highlight("Define", KEYWORD)
+highlight("Repeat", KEYWORD)
 
 --Functions
-local FUNCTION = { "guifg=", GREEN }
+local FUNCTION = { "guifg=", BLUE }
 highlight("Type", FUNCTION)
 highlight("Function", FUNCTION)
 highlight("@constructor", FUNCTION)
