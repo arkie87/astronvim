@@ -19,9 +19,9 @@ keymap.set("n", "N", "Nzz", { noremap = true })
 keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
 keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
 
---Inserting blank lines with enter
-keymap.set("n", "<enter>", "o<esc>")
-keymap.set("n", "<leader><enter>", "O<esc>", { noremap = true })
+--Inserting blank lines with <C-O> and <A-O>
+keymap.set("n", "<C-o>", "o<esc>", { noremap = true })
+keymap.set("n", "<A-o>", "O<esc>", { noremap = true })
 
 --Exiting terminal mode
 keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
@@ -33,8 +33,8 @@ keymap.set("n", "Q", "@q")
 keymap.set("n", "J", "mzJ`z", { noremap = true })
 
 --Move block of text up/down
-keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
-keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
+keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { noremap = true })
+keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { noremap = true })
 
 --Hold selection while indenting
 keymap.set("v", "<", "<gv", { noremap = true })
