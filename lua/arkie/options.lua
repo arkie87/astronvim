@@ -23,6 +23,7 @@ opt.signcolumn = "yes"
 opt.colorcolumn = "100"
 opt.cmdheight = 1
 opt.scrolloff = 10
+opt.sidescrolloff = 10
 opt.completeopt = "menuone"
 
 --Behaivor
