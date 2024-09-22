@@ -1,24 +1,25 @@
 --Colors
 local GREY = "#CCCCCC"
 local DARKGREY = "#555555"
-local YELLOW = "#FFFF00"
+local YELLOW = "#cccc00"
 local ORANGE = "#F67126"
 local BLUE = "#2ACCF5"
+local DARKBLUE = "#10003a"
 local GREEN = "#A6E22E"
 local RED = "#FF0000"
 local PURPLE = "#ccaaFF"
 local BLACK = "#000000"
 
 local NONE = { "guifg=", GREY }
-local COMMENT = { "guifg=", YELLOW }
+local COMMENT = { "guifg=", ORANGE }
 local KEYWORD = { " guifg=", BLUE }
 local BUILTIN = { "guifg=", ORANGE }
 
-local LITERAL = { "guifg=", PURPLE }
-local VARIABLE = { "guifg=", ORANGE }
+local LITERAL = { "guifg=", YELLOW }
+local VARIABLE = { "guifg=", BLUE }
 
 local FUNCTION = { "guifg=", GREEN }
-local PUNCTUATION = { "guifg=", YELLOW }
+local PUNCTUATION = { "guifg=", ORANGE }
 
 local highlight = function(group, commands)
   local str = group
@@ -29,11 +30,16 @@ local highlight = function(group, commands)
 end
 
 --GUI
+highlight("Normal", { "guifg=", GREY, "guibg=", DARKBLUE })
+highlight("NormalNC", { "guifg=", GREY, "guibg=", DARKBLUE })
+highlight("NormalFloat", { "guifg=", GREY, "guibg=", DARKBLUE })
+highlight("NeoTreeNormal", { "guifg=", GREY, "guibg=", DARKBLUE })
+highlight("NeoTreeNormalNC", { "guifg=", GREY, "guibg=", DARKBLUE })
 highlight("MatchParen", { "guifg=", BLUE, "gui=underline" })
 highlight("CursorLine", { "guibg=", DARKGREY })
 highlight("CursorLineNr", { "guifg=", YELLOW })
 highlight("LineNr", { "guifg=", GREY })
-highlight("WinSeparator", { "guifg=", GREY })
+highlight("WinSeparator", { "guifg=", BLUE })
 highlight("ColorColumn", { "guibg=", "none" })
 highlight("Visual", { "guibg=", DARKGREY })
 highlight("HighlightedYank", { "guifg=", BLACK, "guibg=", YELLOW })
@@ -46,7 +52,6 @@ highlight("@punctuation.bracket", PUNCTUATION) --e.g. [{()}]
 highlight("@punctuation.delimiter", PUNCTUATION) --e.g. :,.
 highlight("@punctuation.special", PUNCTUATION) --e.g. f-string {}
 highlight("@constructor.lua", PUNCTUATION) --e.g. {} in lua
-highlight("@attribute", PUNCTUATION) --decorator
 
 --Comments
 highlight("Comment", COMMENT)
@@ -55,8 +60,10 @@ highlight("Comment", COMMENT)
 highlight("Identifier", NONE) --variables
 
 --Variables
+highlight("@variable.builtin", LITERAL) --Self
 highlight("@property", VARIABLE) --properties
 highlight("@variable.parameter", VARIABLE) --args, kwargs
+highlight("@attribute", VARIABLE) --decorator
 
 --Built-Ins
 highlight("@type.builtin", BUILTIN)
@@ -78,7 +85,6 @@ highlight("Typedef", KEYWORD) --Class
 highlight("Conditional", KEYWORD) --If
 highlight("Define", KEYWORD) --Define
 highlight("Repeat", KEYWORD) --For/while
-highlight("@variable.builtin", KEYWORD) --Self
 
 --Functions
 highlight("Type", FUNCTION)
