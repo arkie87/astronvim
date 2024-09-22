@@ -8,6 +8,9 @@ keymap.set({ "i", "n" }, "<right>", "<Nop>", { desc = "Disable right arrow" })
 keymap.set({ "i", "n" }, "<up>", "<Nop>", { desc = "Disable up arrow" })
 keymap.set({ "i", "n" }, "<down>", "<Nop>", { desc = "Disable down arrow" })
 
+--Shift-Tab
+keymap.set("i", "<S-Tab>", "<Esc><<_i")
+
 -- Change redo to U
 keymap.set("n", "U", "<C-r>", { noremap = true, desc = "Redo" })
 
