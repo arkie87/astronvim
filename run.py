@@ -1,4 +1,4 @@
-from os import system, chdir
+from os import chdir, system
 from sys import argv
 
 
@@ -19,6 +19,8 @@ class File:
 
 
 class InterpretedLanguage(File):
+    INTERPRETOR = None
+
     def execute(self):
         command = f"{self.INTERPRETOR} {self.fullfile}"
         system(command)
