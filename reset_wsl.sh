@@ -16,6 +16,10 @@ brew install neovim
 brew install ripgrep
 brew install lazygit
 
+brew install python-tk
+brew install python-matplotlib
+brew install ipython
+
 brew install npm
 npm install -g neovim
 
