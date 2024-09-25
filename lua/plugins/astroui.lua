@@ -8,32 +8,18 @@
 ---@type LazySpec
 return {
   "AstroNvim/astroui",
-  ---@type AstroUIOpts
-  opts = {
-    -- change colorscheme
-    colorscheme = "astrodark",
-    -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
-    highlights = {
-      init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
-      },
-      astrodark = { -- a table of overrides/changes when applying the astrotheme theme
-        -- Normal = { bg = "#000000" },
-      },
-    },
-    -- Icons can be configured throughout the interface
-    icons = {
-      -- configure the loading of the lsp in the status line
-      LSPLoading1 = "⠋",
-      LSPLoading2 = "⠙",
-      LSPLoading3 = "⠹",
-      LSPLoading4 = "⠸",
-      LSPLoading5 = "⠼",
-      LSPLoading6 = "⠴",
-      LSPLoading7 = "⠦",
-      LSPLoading8 = "⠧",
-      LSPLoading9 = "⠇",
-      LSPLoading10 = "⠏",
-    },
-  },
+  opts = function(_, opts)
+    local patch = function(orig)
+      local colors = orig()
+      local get_hl = require("astroui").get_hlgroup
+
+      colors.buffer_fg = get_hl("TabLine").fg
+      colors.buffer_bg = get_hl("TabLine").bg
+      colors.buffer_active_fg = get_hl("TabLineSel").fg
+      colors.buffer_active_bg = get_hl("TabLineSel").bg
+      return colors
+    end
+
+    opts.status.setup_colors = require("astrocore").patch_func(opts.status.setup_colors, patch)
+  end,
 }
