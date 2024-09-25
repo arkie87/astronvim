@@ -10,6 +10,12 @@ return {
       "lua",
       "vim",
       "python",
+      "matlab",
+      "c",
+      "cpp",
+      "csharp",
+      "java",
+      "javascript",
       -- add more arguments for adding more treesitter parsers
     },
   },
