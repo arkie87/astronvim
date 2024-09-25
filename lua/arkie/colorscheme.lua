@@ -1,6 +1,6 @@
 --Colors
 local GREY = "#CCCCCC"
-local DARKGREY = "#555555"
+local DARKGREY = "#444444"
 local YELLOW = "#cccc00"
 local ORANGE = "#F67126"
 local BLUE = "#2ACCF5"
@@ -9,9 +9,10 @@ local GREEN = "#A6E22E"
 local RED = "#FF0000"
 local PURPLE = "#ccaaFF"
 local BLACK = "#000000"
+local LIGHTBLACK = "#222222"
 
 local NONE = { "guifg=", GREY }
-local COMMENT = { "guifg=", ORANGE }
+local COMMENT = { "guifg=", PURPLE }
 local KEYWORD = { " guifg=", BLUE }
 local BUILTIN = { "guifg=", ORANGE }
 
@@ -32,9 +33,11 @@ end
 --GUI
 highlight("Normal", { "guifg=", GREY, "guibg=", DARKBLUE })
 highlight("NormalNC", { "guifg=", GREY, "guibg=", DARKBLUE })
-highlight("NormalFloat", { "guifg=", GREY, "guibg=", DARKBLUE })
+highlight("NormalFloat", { "guifg=", GREY, "guibg=", LIGHTBLACK })
 highlight("NeoTreeNormal", { "guifg=", GREY, "guibg=", DARKBLUE })
 highlight("NeoTreeNormalNC", { "guifg=", GREY, "guibg=", DARKBLUE })
+highlight("TabLine", { "guifg=", DARKGREY, "guibg=", BLACK })
+highlight("TabLineSel", { "guifg=", BLUE, "guibg=", DARKBLUE })
 highlight("MatchParen", { "guifg=", BLUE, "gui=underline" })
 highlight("CursorLine", { "guibg=", DARKGREY })
 highlight("CursorLineNr", { "guifg=", YELLOW })
@@ -96,3 +99,8 @@ highlight("DiagnosticVirtualTextError", { "guifg=", RED, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextWarn", { "guifg=", ORANGE, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextInfo", { "guifg=", BLUE, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextHint", { "guifg=", GREEN, "guibg=", BLACK })
+
+highlight("DiagnosticUnnecessary", { "guifg=", BLACK, "guibg=", GREEN, "gui=underline" })
+highlight("DiagnosticUnderlineInfo", { "guifg=", BLACK, "guibg=", BLUE, "gui=underline" })
+highlight("DiagnosticUnderlineWarn", { "guifg=", BLACK, "guibg=", ORANGE, "gui=underline" })
+highlight("DiagnosticUnderlineError", { "guifg=", BLACK, "guibg=", RED, "gui=underline" })
