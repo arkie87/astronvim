@@ -3,16 +3,18 @@ from sys import argv
 
 
 def disect_fullfile(fullfile):
-    *dir, filename, ext = fullfile.replace(".",
-                                           "/").replace("\\", "/").split("/")
-    return {"path": "/".join(dir), "filename": filename, "ext": ext}
+    splits = fullfile.replace("\\", "/").split("/")
+    dir = "/".join(splits[:-1])
+    filename, ext = splits[-1].split(".")
+    return {"path": dir, "filename": filename, "ext": ext}
 
 
 class File:
     def __init__(self, fullfile):
         self.fullfile = fullfile
         self.path, self.filename, self.ext = disect_fullfile(fullfile).values()
-        chdir(self.path)
+        if self.path:
+            chdir(self.path)
 
     def execute(self):
         raise NotImplementedError("You need to subclass 'File'.")
