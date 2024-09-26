@@ -13,7 +13,7 @@ return {
       "matlab",
       "c",
       "cpp",
-      "csharp",
+      "c_sharp",
       "java",
       "javascript",
       -- add more arguments for adding more treesitter parsers
