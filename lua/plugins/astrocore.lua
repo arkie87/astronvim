@@ -64,7 +64,7 @@ return {
           desc = "Previous buffer",
         },
 
-        ["<Leader>e"] = { "<cmd>Neotree toggle<CR>", desc = "Neotree Toggl:soi" },
+        ["<Leader>e"] = { "<cmd>Neotree toggle<CR>", desc = "Neotree Toggle" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
