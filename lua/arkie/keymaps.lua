@@ -87,6 +87,12 @@ keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 
 --Actions
 -- keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 ~/.config/nvim/run.py %<CR>", { desc = "Run current file" })
+keymap.set(
+  "n",
+  "<leader>`",
+  "<cmd>w<CR><cmd>TermExec cmd='python3 ~/.config/nvim/run.py %'<CR>",
+  { desc = "Run current file" }
+)
 
 --Inspect
 keymap.set({ "n", "v" }, "<leader>I", "<cmd>Inspect<CR>")
