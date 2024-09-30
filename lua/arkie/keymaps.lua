@@ -103,3 +103,25 @@ keymap.set("n", "<leader><leader>,", "A,<esc>J", { desc = "Append comma and join
 keymap.set("n", "<leader><leader>;", "A;<esc>J", { desc = "Append semicolon and join" })
 keymap.set("n", "<leader><leader>'", "I'<esc>A',<esc>j", { desc = "Surround single quote and join" })
 keymap.set("n", '<leader><leader>"', 'I"<esc>A",<esc>j', { desc = "Surround double quote and join" })
+
+--Debugger
+local dap = require "dap"
+local dapui = require "dapui"
+local widgets = require "dap.ui.widgets"
+
+keymap.set("n", "<F2>", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+keymap.set("n", "<F14>", dap.set_breakpoint, { desc = "Set Breakpoint" })
+keymap.set("n", "<F26>", dap.clear_breakpoints, { desc = "Clear Breakpoints" })
+
+keymap.set("n", "<F5>", dap.continue, { desc = "Debug Continue" })
+keymap.set("n", "<F17>", dap.restart, { desc = "Debug Restart" })
+keymap.set("n", "<F29>", dap.terminate, { desc = "Debug Terminate" })
+keymap.set("n", "<F53>", dap.run_to_cursor, { desc = "Run to Cursor" })
+
+keymap.set("n", "<F6>", dap.step_over, { desc = "Step Over" })
+keymap.set("n", "<F18>", dap.step_into, { desc = "Step Into" })
+keymap.set("n", "<F30>", dap.step_out, { desc = "Step Out" })
+
+keymap.set("n", "<F1>", widgets.hover, { desc = "Hover" })
+keymap.set("n", "<F13>", dap.repl.toggle, { desc = "Toggle REPL" })
+keymap.set("v", "<F1>", dapui.eval, { desc = "Evaluate selection" })
