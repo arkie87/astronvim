@@ -104,3 +104,7 @@ highlight("DiagnosticUnnecessary", { "guifg=", BLACK, "guibg=", GREEN, "gui=unde
 highlight("DiagnosticUnderlineInfo", { "guifg=", BLACK, "guibg=", BLUE, "gui=underline" })
 highlight("DiagnosticUnderlineWarn", { "guifg=", BLACK, "guibg=", ORANGE, "gui=underline" })
 highlight("DiagnosticUnderlineError", { "guifg=", BLACK, "guibg=", RED, "gui=underline" })
+
+--Debug Virtual Text
+highlight("NvimDapVirtualText", { "guifg=", PURPLE, "guibg=", BLACK })
+highlight("NvimDapVirtualTextChanged", { "guifg=", PURPLE, "guibg=", BLACK, "gui=underline" })
