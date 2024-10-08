@@ -87,9 +87,9 @@ keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 
 --Actions
 -- keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 ~/.config/nvim/run.py %<CR>", { desc = "Run current file" })
-keymap.set({"n", "i", "v", "t", "x"}, "<F12>", "<cmd>ToggleTerm direction=float<CR>")
-keymap.set({"n", "i", "v", "t", "x"}, "<F24>", "<cmd>ToggleTerm direction=horizontal<CR>")
-keymap.set({"n", "i", "v", "t", "x"}, "<F36>", "<cmd>ToggleTerm direction=vertical<CR>")
+keymap.set({ "n", "i", "v", "t", "x" }, "<F12>", "<cmd>ToggleTerm direction=float<CR>")
+keymap.set({ "n", "i", "v", "t", "x" }, "<F24>", "<cmd>ToggleTerm direction=horizontal<CR>")
+keymap.set({ "n", "i", "v", "t", "x" }, "<F36>", "<cmd>ToggleTerm direction=vertical<CR>")
 keymap.set(
   "n",
   "<leader>`",
