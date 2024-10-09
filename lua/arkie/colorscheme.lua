@@ -79,6 +79,7 @@ highlight("String", LITERAL)
 highlight("Number", LITERAL)
 highlight("Float", LITERAL)
 highlight("Boolean", LITERAL)
+highlight("@string.escape", FUNCTION)
 
 --Keywords
 highlight("Keyword", KEYWORD)
