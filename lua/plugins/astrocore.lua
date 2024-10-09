@@ -22,14 +22,15 @@ return {
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
       virtual_text = {
-        virt_text_pos = "right_align",
-        suffix = " ",
+        -- virt_text_pos = "right_align",
+        -- suffix = " ",
+        virt_text_win_col = 100,
       },
       underline = true,
     },
     -- vim options can be configured here
     options = {
-      opt = { -- vim.opt.<key>
+      opt = { -- vim.opt.<ey>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
