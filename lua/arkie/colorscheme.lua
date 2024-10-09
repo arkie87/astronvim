@@ -88,6 +88,7 @@ highlight("Typedef", KEYWORD) --Class
 highlight("Conditional", KEYWORD) --If
 highlight("Define", KEYWORD) --Define
 highlight("Repeat", KEYWORD) --For/while
+highlight("Exception", KEYWORD) --Try/Except
 
 --Functions
 highlight("Type", FUNCTION)
