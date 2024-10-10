@@ -12,7 +12,7 @@ local BLACK = "#000000"
 local LIGHTBLACK = "#222222"
 
 local NONE = { "guifg=", GREY }
-local COMMENT = { "guifg=", PURPLE, "gui=None" }
+local COMMENT = { "guifg=", PURPLE, "gui=italic" }
 local KEYWORD = { " guifg=", BLUE, "gui=None" }
 local BUILTIN = { "guifg=", ORANGE }
 
