@@ -1,0 +1,6 @@
+Install Helper Programs:
+install lazygit from https://github.com/jesseduffield/lazygit/releases
+install ripgrep from https://github.com/BurntSushi/ripgrep/releases
+
+put into binaries folder and add that folder to path
+
