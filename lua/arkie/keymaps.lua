@@ -90,12 +90,6 @@ keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 keymap.set({ "n", "i", "v", "t", "x" }, "<F12>", "<cmd>ToggleTerm direction=float<CR>")
 keymap.set({ "n", "i", "v", "t", "x" }, "<F24>", "<cmd>ToggleTerm direction=horizontal<CR>")
 keymap.set({ "n", "i", "v", "t", "x" }, "<F36>", "<cmd>ToggleTerm direction=vertical<CR>")
-keymap.set(
-  "n",
-  "<leader>`",
-  "<cmd>w<CR><cmd>TermExec cmd='python3 ~/.config/nvim/run.py %'<CR>",
-  { desc = "Run current file" }
-)
 
 --Inspect
 keymap.set({ "n", "v" }, "<leader>I", "<cmd>Inspect<CR>")
@@ -128,3 +122,38 @@ keymap.set("n", "<F30>", dap.step_out, { desc = "Step Out" })
 keymap.set("n", "<F1>", widgets.hover, { desc = "Hover" })
 keymap.set("n", "<F13>", dap.repl.toggle, { desc = "Toggle REPL" })
 keymap.set("v", "<F1>", dapui.eval, { desc = "Evaluate selection" })
+
+DIRECTION = "float"
+
+local display_direction = function()
+  print("ToggleTerm Set to " .. DIRECTION)
+  vim.cmd("ToggleTerm direction=" .. DIRECTION)
+  vim.cmd("ToggleTerm direction=" .. DIRECTION)
+end
+
+keymap.set("n", "<leader>tf", function()
+  DIRECTION = "float"
+  display_direction()
+end, { desc = "Set Default Terminal to Float" })
+
+keymap.set("n", "<leader>tv", function()
+  DIRECTION = "vertical"
+  display_direction()
+end, { desc = "Set Default Terminal to Vertical" })
+
+keymap.set("n", "<leader>th", function()
+  DIRECTION = "horizontal"
+  display_direction()
+end, { desc = "Set Default Terminal to Horizontal" })
+
+keymap.set("n", "<leader>tt", function()
+  DIRECTION = "tab"
+  display_direction()
+end, { desc = "Set Default Terminal to Tab" })
+
+keymap.set(
+  "n",
+  "<leader>`",
+  '<cmd>w<CR><cmd>TermExec cmd=reset<CR><cmd>TermExec cmd="python3 ~/.config/nvim/run.py %"<CR>',
+  { desc = "Run current file" }
+)
