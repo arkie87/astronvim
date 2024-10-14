@@ -12,6 +12,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "pylsp",
+        "pyright",
         "matlab_ls",
         -- add more arguments for adding more language servers
       },
