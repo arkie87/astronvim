@@ -97,6 +97,11 @@ highlight("Function", FUNCTION)
 highlight("@constructor", FUNCTION)
 
 --Diagnostics
+highlight("TinyInlineDiagnosticVirtualTextError", { "guifg=", RED, "guibg=", BLACK })
+highlight("TinyInlineDiagnosticVirtualTextWarn", { "guifg=", ORANGE, "guibg=", BLACK })
+highlight("TinyInlineDiagnosticVirtualTextInfo", { "guifg=", BLUE, "guibg=", BLACK })
+highlight("TinyInlineDiagnosticVirtualTextHint", { "guifg=", GREEN, "guibg=", BLACK })
+
 highlight("DiagnosticVirtualTextError", { "guifg=", RED, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextWarn", { "guifg=", ORANGE, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextInfo", { "guifg=", BLUE, "guibg=", BLACK })
