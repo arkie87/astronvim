@@ -108,10 +108,10 @@ highlight("DiagnosticVirtualTextWarn", { "guifg=", ORANGE, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextInfo", { "guifg=", BLUE, "guibg=", BLACK })
 highlight("DiagnosticVirtualTextHint", { "guifg=", GREEN, "guibg=", BLACK })
 
-highlight("DiagnosticUnnecessary", { "guifg=", BLACK, "guibg=", GREEN, "gui=underline" })
-highlight("DiagnosticUnderlineInfo", { "guifg=", BLACK, "guibg=", BLUE, "gui=underline" })
-highlight("DiagnosticUnderlineWarn", { "guifg=", BLACK, "guibg=", ORANGE, "gui=underline" })
-highlight("DiagnosticUnderlineError", { "guifg=", BLACK, "guibg=", RED, "gui=underline" })
+highlight("DiagnosticUnnecessary", { "guisp=", GREEN, "gui=undercurl" })
+highlight("DiagnosticUnderlineInfo", { "guisp=", BLUE, "gui=undercurl" })
+highlight("DiagnosticUnderlineWarn", { "guisp=", ORANGE, "gui=undercurl" })
+highlight("DiagnosticUnderlineError", { "guisp=", RED, "gui=undercurl" })
 
 --Debug Virtual Text
 highlight("NvimDapVirtualText", { "guifg=", PURPLE, "guibg=", BLACK })
