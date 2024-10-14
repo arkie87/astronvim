@@ -14,6 +14,9 @@ keymap.set("i", "<S-Tab>", "<Esc><<_i")
 -- Change redo to U
 keymap.set("n", "U", "<C-r>", { noremap = true, desc = "Redo" })
 
+--Keep cursor in place when applying J
+keymap.set("n", "J", "mzJ`z", { noremap = true })
+
 --Search results in center of screen
 keymap.set("n", "n", "nzz", { noremap = true })
 keymap.set("n", "N", "Nzz", { noremap = true })
@@ -32,9 +35,6 @@ keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 --Shortcut to repeat macro
 keymap.set("n", "Q", "@q")
 
---Keep cursor in place when applying J
-keymap.set("n", "J", "mzJ`z", { noremap = true })
-
 --Move block of text up/down
 keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { noremap = true })
 keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { noremap = true })
@@ -49,20 +49,12 @@ keymap.set({ "n", "v", "i" }, "<C-a>", "<esc>ggVG", { desc = "Select all" })
 --Save
 keymap.set({ "n", "v", "i" }, "<C-s>", "<cmd>w<CR>", { desc = "Save" })
 
---Next/Prev
-keymap.set("n", "[(", "?(<CR>", { desc = "Previous (" })
+--Next/Prev Block
 keymap.set("n", "[[", "?[<CR>", { desc = "Previous [" })
-keymap.set("n", "[{", "?{<CR>", { desc = "Previous {" })
-keymap.set("n", "[)", "?)<CR>", { desc = "Previous )" })
-keymap.set("n", "[]", "?]<CR>", { desc = "Previous ]" })
-keymap.set("n", "[}", "?}<CR>", { desc = "Previous }" })
-
-keymap.set("n", "](", "/(<CR>", { desc = "Next (" })
-keymap.set("n", "][", "/[<CR>", { desc = "Next [" })
-keymap.set("n", "]{", "/{<CR>", { desc = "Next {" })
-keymap.set("n", "])", "/)<CR>", { desc = "Next )" })
 keymap.set("n", "]]", "/]<CR>", { desc = "Next ]" })
-keymap.set("n", "]}", "/}<CR>", { desc = "Next }" })
+
+--Backspace to clear a line
+keymap.set("n", "<BS>", "cc<Esc>")
 
 --
 -- LEADER COMMANDS --
@@ -86,7 +78,6 @@ keymap.set("v", "<leader>=", "g<C-a>", { noremap = true, desc = "Increment" })
 keymap.set("v", "<leader>-", "g<C-x>", { noremap = true, desc = "Decrement" })
 
 --Actions
--- keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 ~/.config/nvim/run.py %<CR>", { desc = "Run current file" })
 keymap.set({ "n", "i", "v", "t", "x" }, "<F12>", "<cmd>ToggleTerm direction=float<CR>")
 keymap.set({ "n", "i", "v", "t", "x" }, "<F24>", "<cmd>ToggleTerm direction=horizontal<CR>")
 keymap.set({ "n", "i", "v", "t", "x" }, "<F36>", "<cmd>ToggleTerm direction=vertical<CR>")
