@@ -113,6 +113,8 @@ highlight("DiagnosticUnderlineInfo", { "guisp=", BLUE, "gui=undercurl" })
 highlight("DiagnosticUnderlineWarn", { "guisp=", ORANGE, "gui=undercurl" })
 highlight("DiagnosticUnderlineError", { "guisp=", RED, "gui=undercurl" })
 
---Debug Virtual Text
+--Debug
+highlight("DapStoppedSymbol", { "guibg=", DARKGREY })
+highlight("DapBreakpoint", { "guibg=", DARKGREY })
 highlight("NvimDapVirtualText", { "guifg=", PURPLE, "guibg=", BLACK })
 highlight("NvimDapVirtualTextChanged", { "guifg=", PURPLE, "guibg=", BLACK, "gui=underline" })
