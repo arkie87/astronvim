@@ -12,7 +12,7 @@ local BLACK = "#000000"
 local LIGHTBLACK = "#222222"
 
 local NONE = { "guifg=", GREY }
-local COMMENT = { "guifg=", PURPLE, "gui=italic" }
+local COMMENT = { "guifg=", PURPLE }
 local KEYWORD = { " guifg=", BLUE, "gui=None" }
 local BUILTIN = { "guifg=", ORANGE }
 
@@ -58,6 +58,7 @@ highlight("@constructor.lua", PUNCTUATION) --e.g. {} in lua
 
 --Comments
 highlight("Comment", COMMENT)
+highlight("@string.documentation", COMMENT)
 
 --None
 highlight("Identifier", NONE) --variables
