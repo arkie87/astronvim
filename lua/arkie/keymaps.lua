@@ -154,6 +154,6 @@ end, { desc = "Set Default Terminal to Tab" })
 keymap.set(
   "n",
   "<leader>`",
-  '<cmd>w<CR><cmd>TermExec cmd=reset<CR><cmd>TermExec cmd="python3 ~/.config/nvim/run.py %"<CR>',
+  '<cmd>w<CR><cmd>TermExec cmd=reset<CR><cmd>TermExec cmd="python3 ~/.config/nvim/python/run.py %"<CR>',
   { desc = "Run current file" }
 )
