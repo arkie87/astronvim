@@ -50,8 +50,8 @@ keymap.set({ "n", "v", "i" }, "<C-a>", "<esc>ggVG", { desc = "Select all" })
 keymap.set({ "n", "v", "i" }, "<C-s>", "<cmd>w<CR>", { desc = "Save" })
 
 --Next/Prev Block
-keymap.set("n", "[[", "?[<CR>", { desc = "Previous [" })
-keymap.set("n", "]]", "/]<CR>", { desc = "Next ]" })
+keymap.set("n", "[[", "<plug>(MatchitNormalMultiBackward)", { desc = "Previous MatchIt" })
+keymap.set("n", "]]", "<plug>(MatchitNormalMultiForward)", { desc = "Next MatchIt" })
 
 --Backspace to clear a line
 keymap.set("n", "<BS>", "cc<Esc>")
@@ -62,7 +62,7 @@ keymap.set("n", "<BS>", "cc<Esc>")
 
 --Toggle relative numbers
 vim.keymap.set("n", "<leader>un", function()
-  rnu = vim.opt.relativenumber:get()
+  local rnu = vim.opt.relativenumber:get()
   vim.opt.relativenumber = not rnu
   if rnu then
     vim.opt.numberwidth = SINGLENUMBERWIDTH
