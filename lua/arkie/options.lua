@@ -51,3 +51,7 @@ vim.fn.sign_define("DapStopped", {
   linehl = "DapBreakpoint",
   -- numhl = "DapBreakPoint"
 })
+vim.fn.sign_define("BufferClose", {
+  text = "X",
+  linehl = "Error",
+})

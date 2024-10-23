@@ -1,20 +1,27 @@
-from os import chdir, system
+from os import chdir, path, system
 from sys import argv
+
+HOME = "/".join(path.dirname(__file__).replace("\\", "/").split("/")[:-3])
+print(f"{HOME=}")
 
 
 def disect_fullfile(fullfile):
     splits = fullfile.replace("\\", "/").split("/")
     dir = "/".join(splits[:-1])
     filename, ext = splits[-1].split(".")
+
+    if not dir.startswith(HOME):
+        dir = f"{HOME}/{dir}"
     return {"path": dir, "filename": filename, "ext": ext}
 
 
 class File:
     def __init__(self, fullfile):
-        self.fullfile = fullfile
         self.path, self.filename, self.ext = disect_fullfile(fullfile).values()
         if self.path:
             chdir(self.path)
+            print(f"{self.path=}")
+            self.fullfile = f"{self.filename}.{self.ext}"
 
     def execute(self):
         raise NotImplementedError("You need to subclass 'File'.")
