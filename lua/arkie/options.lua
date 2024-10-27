@@ -45,13 +45,3 @@ opt.numberwidth = DUALNUMBERWIDTH
 
 --Illumination
 vim.g.Illuminate_delay = 0
-vim.fn.sign_define("DapStopped", {
-  text = "=>",
-  -- texthl = "DapStoppedSymbol",
-  linehl = "DapBreakpoint",
-  -- numhl = "DapBreakPoint"
-})
-vim.fn.sign_define("BufferClose", {
-  text = "X",
-  linehl = "Error",
-})
